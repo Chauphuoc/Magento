@@ -1,0 +1,15 @@
+.summary.title{
+    color: black !important;
+}
+#block-shipping-heading {
+    color: black !important;
+}
+.title{
+    color: black !important;
+}
+.cart-discount .active {
+    background-color: white !important;
+}
+.control .input-text {
+    height: 55px !important;
+}

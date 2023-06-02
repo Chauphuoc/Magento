@@ -1,0 +1,33 @@
+/* .control #customer-email {
+    border: 1px solid #c2c2c2 !important;
+    position: absolute !important;
+    width: 252px !important;
+    top: -1px !important;
+} */
+/* .abs-field-tooltip input, .field{
+    width: calc(100% - -251px) !important;
+}
+
+.field-tooltip {
+    position: absolute !important;
+    top: 28px !important;
+    left: -4px !important;
+} */
+/* .control .note {
+    position: absolute;
+    top: 27px !important;
+    font-size: 10px !important;
+    left: 25px !important;
+} */
+tbody .row{
+    background-color: white !important;
+}
+.opc-block-summary {
+    background-color: white !important;
+}
+.opc-block-summary .block.items-in-cart.active {
+    background-color: white !important;
+}
+[role|="heading"]{
+    color: black !important;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Snaptec\RestApiExample\Api\ProductRepositoryInterface" type="Snaptec\RestApiExample\Model\ProductRepository"/>
+    <preference for="Snaptec\RestApiExample\Api\Data\ProductInterface" type="Snaptec\RestApiExample\Model\Data\Product" />
+    <!-- <preference for="Snaptec\RestApiExample\Api\PostInterface" type="Snaptec\RestApiExample\Model\PostManagement"/> -->
+    <preference for="Snaptec\RestApiExample\Api\CustomInterface" type="Snaptec\RestApiExample\Model\Custom"/>
+    <preference for="Snaptec\RestApiExample\Api\CustomerOrderInterface" type="Snaptec\RestApiExample\Model\CustomerOrder"/>
+    
+</config>

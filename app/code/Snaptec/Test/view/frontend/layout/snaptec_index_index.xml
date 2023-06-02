@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Du bao thoi tiet</title>
+        <css src="Snaptec_Test::css/style.css" />
+        <!-- Khong include jquery vao header vi se bi loi plugin chay truoc jquery not define -->
+        
+    </head>
+
+    <referenceBlock name="content">
+        <block class="Snaptec\Test\Block\Weather" name="snap_test" template="weather.phtml">
+        </block>
+    </referenceBlock>
+
+    
+</page>

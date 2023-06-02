@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<!-- action = link -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    <!-- Tao module moi hien thi o trang admin -->
+        <add id="Snaptec_Test::Brand_Manager" title="Brand Manager" module="Snaptec_Test"  action="brand/Index/Index" resource="Snaptec_Test::Brand_Manager"/>
+        <add id="Snaptec_Test::Admin_Grid" title="Admin Grid" parent="Snaptec_Test::Brand_Manager" module="Snaptec_Test"  action="brand/Index/Index" resource="Snaptec_Test::Brand_Manager"/>
+        
+
+        <add id="Snaptec_Test::test_configuration"
+             title="Configuration"
+             resource="Magento_Backend::content"
+             module="Snaptec_Test"
+             sortOrder="1"
+             action="adminhtml/system_config/edit/section/test"
+             parent="Snaptec_Test::test_configuration" />
+    </menu>
+</config>

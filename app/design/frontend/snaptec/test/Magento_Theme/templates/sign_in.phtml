@@ -1,0 +1,24 @@
+<ul class="account-list-header">
+    <li class="account-list-li">
+        <i class="fas fa-search" id="signup_btn"></i>
+    </li>
+    <li class="account-list-li">
+        <a class="fas fa-user" href="https://magento.test/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnRlc3QvY3BmdXJuaXR1cmU%2C/"></a>
+    </li>
+    
+</ul>
+
+<script>
+    require([
+            "jquery",
+        ],
+        function($) {
+            $(document).ready(function() {
+                $("#signup_btn").click(function() {
+                    $("#search-icon").toggle('show');
+                    console.log('icon here');
+                });
+            })
+
+        });
+</script>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <font src="fonts/opensans/light/opensans-300.woff2"/>
+        <font src="fonts/opensans/regular/opensans-400.woff2"/>
+        <font src="fonts/opensans/semibold/opensans-600.woff2"/>
+        <font src="fonts/opensans/bold/opensans-700.woff2"/>
+        <font src="fonts/Luma-Icons.woff2"/>
+        <css src="css/custom.css" />
+        <!-- <css src="css/checkout/shipping.css" /> -->
+        
+        <css src="css/owl.carousel.min.css" />
+        <css src="css/owl.theme.default.min.css" />
+        <css src="css/bootstrap.min.css" />
+        <css src="https://use.fontawesome.com/releases/v5.7.1/css/all.css" src_type="url"/>
+       
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" src_type="url"></script>
+        <script src="js/owl.carousel.min.js" />
+        <script src="js/owl.carousel.js" />
+        <script src="js/bootstrap.min.js" /> 
+        <!-- <script src="js/bootstrap.bundle.js" /> -->
+    </head>
+</page>
+

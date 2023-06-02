@@ -1,0 +1,30 @@
+
+<?php $categories = $block->getAllCategories(); 
+
+?>
+    
+<div  class="row">
+ <div class="col-md-12 list-cates">
+  <h1 class="title">Categories</h1>
+  <div class="categories">
+    <div id="categories_catalog" class="owl-carousel owl-theme ">
+        <?php foreach($categories as $item) { ?>
+            <div class="item " >
+            <a href="<?=$item->getUrl()?>">
+            <img class="d-block w-80" src="/pub<?=$item->getImage()?>" alt="" /> 
+            </a>
+    
+            <div class="cate-name"><?=$item->getName() ?></div>
+            </div>
+    
+        <?php } ?>
+</div>
+
+</div>
+<div class="slider-bottom-line">&nbsp</div>
+</div>
+  </div>
+    
+ </div>
+
+ 

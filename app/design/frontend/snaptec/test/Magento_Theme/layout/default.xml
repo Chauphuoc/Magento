@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks" />
+    <body>
+
+    <attribute name="id" value="html-body"/>
+        <block name="require.js" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/require_js.phtml" />
+        <referenceContainer name="after.body.start">
+            <block class="Magento\RequireJs\Block\Html\Head\Config" name="requirejs-config"/>
+            <block class="Magento\Framework\View\Element\Js\Cookie" name="js_cookies" template="Magento_Theme::js/cookie.phtml"/>
+            <block class="Magento\Theme\Block\Html\Notices" name="global_notices" template="Magento_Theme::html/notices.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="top.links">
+            <block class="Magento\Theme\Block\Html\Header" name="header" as="header" before="-">
+                <arguments>
+                    <argument name="show_part" xsi:type="string">welcome</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+    <!-- header -->
+    
+        <referenceContainer name="header.container" htmlId="header"  >
+
+            <container name="header.panel.wrapper" htmlClass="panel wrapper" htmlTag="div" before="-">
+                <container name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
+                    <block class="Magento\Customer\Block\Account\Navigation" name="top.links" template="Magento_Theme::login.phtml">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">header links</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+     
+            <container htmlTag="div" name="header-top" htmlClass="container-fluid" before="-" >
+                <container name="my_header" htmlTag="div" htmlClass="row">
+                    <container name="left-header" htmlTag="div" htmlClass="col-lg-4">
+                        <container name="left-header-part" htmlTag="ul" htmlClass="header-content-list">
+                            <block class="Magento\Framework\View\Element\Template" name="left_header" template="Magento_Theme::left_header.phtml" >
+                            </block>
+                
+                            <block class="Magento\Store\Block\Switcher" name="left-header-block"  template="Magento_Theme::switch/languages.phtml" before="shop-test">
+                                <arguments>
+                                <argument name="view_model" xsi:type="object">Magento\Store\ViewModel\SwitcherUrlProvider</argument>
+                                 </arguments>
+                            </block>
+                        </container>
+                    </container>
+
+                    <container htmlTag="div" htmlClass="col-lg-4">
+                        <container name="logo-header" htmlTag="div" htmlClass="header-logo"  />
+                    </container>
+                   
+                    <container name="right-header" htmlTag="div" htmlClass="col-lg-4">
+                       <!-- <referenceContainer name="header-wrapper" htmlTag="div" /> -->
+                       <container name="search-icon" htmlTag="div" htmlId="search-icon"  />
+                       <container name="wishlist-icon" htmlTag="div" htmlId="wishlist-icon">
+                            <block class="Magento\Wishlist\Block\Link" name="wish-list-link-custom" template="Magento_Wishlist::link.phtml" />
+                       </container>
+                        <block class="Magento\Framework\View\Element\Template"  name="right-header-block" template="Magento_Theme::sign_in.phtml">
+                        </block>
+                    </container>
+                </container> 
+            </container>   
+
+            <container htmlTag="div" name="header-bottom" htmlClass="container-fluid">
+                <container name="my-header-bottom" htmlTag="div" htmlClass="row">
+                    <container name="left-header-bottom" htmlTag="div" htmlClass="col-lg-9">
+                    </container>
+
+                    <container name="right-header-bottom" htmlTag="div" htmlClass="col-lg-3 right-header-bottom">
+                        <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::right_header_bottom.phtml" >
+                        </block>
+                    </container>
+            </container>
+            </container>
+
+            
+            
+        </referenceContainer>
+
+        <referenceContainer name="page.top">
+            
+            <block class="Magento\Theme\Block\Html\Breadcrumbs" name="breadcrumbs" as="breadcrumbs" template="Magento_Theme::breadcrumbs.phtml"/>
+        </referenceContainer>
+
+        <!-- main content (main section chi chua block => remove container) -->
+
+        <referenceContainer name="main.content" htmlId="main-content">
+
+            <referenceContainer name="content">
+                
+                <block name="banner-carousel" class="Magento\Framework\View\Element\Template" template="Magento_Theme::carousel/banner.phtml">
+                </block>
+
+                <block name="face-carousel" class="Magento\Framework\View\Element\Template" template="Magento_Theme::carousel/categories.phtml" />
+                
+                
+            </referenceContainer> 
+                    <block name="face-category" class="Magento\Framework\View\Element\Template" template="Magento_Theme::carousel/face.phtml" />
+            
+        </referenceContainer>
+
+        <block class="Magento\Framework\View\Element\Template"  name="make-up" template="Magento_Theme::make-up.phtml"></block>
+        
+        <!-- footer -->
+<!-- 
+        <referenceContainer name="footer-container">
+            
+            <referenceContainer name="footer" label="Page Footer" htmlTag="div" htmlClass="footer content row">
+                <container name="footer-row" htmlTag="div" htmlClass="row">
+                    <container name="footer-content" htmlTag="div" htmlClass="col-lg-4" htmlId="subcribe"></container>
+                    <container name="shop-name" htmlTag="div" htmlClass="col-lg-4">
+                        <block name="shop-name-content" class="Magento\Framework\View\Element\Template" template="Magento_Theme::bottom_shop_name.phtml" />
+                    </container>
+                    <container name="social-media" htmlTag="div" htmlClass="col-lg-4">
+                        <block name="social-media-logo" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/footer_center.phtml" />
+                    </container>
+
+                </container>
+
+
+                 
+            </referenceContainer>
+               
+            
+        </referenceContainer> -->
+
+
+        <!-- move -->
+        <move element="navigation.sections" destination="left-header-bottom" />
+        <move element="logo" destination="logo-header" />
+        <move element="store_language" destination="language" />
+        <move element="copyright" destination="copyright-footer" />
+        <move element="minicart" destination="right-header" />
+        <move element="form.subscribe" destination="footer-content" />
+        <move element="header-wrapper" destination="search-icon"/>
+        
+      
+       <referenceBlock name="footer_links" remove="true" />
+       <referenceBlock name="footer-container" remove="true" />
+    </body>
+</page>

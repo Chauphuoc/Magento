@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<!-- //Lay tu module cms -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="brand_listing_data_source" xsi:type="string">Snaptec\Test\Model\ResourceModel\Brand\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+    <virtualType name="Snaptec\Test\Model\ResourceModel\Brand\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">brand</argument>
+            <argument name="resourceModel" xsi:type="string">\Snaptec\Test\Model\ResourceModel\Brand</argument>
+        </arguments>
+    </virtualType>
+   
+    <type name="Snaptec\Test\Controller\Adminhtml\Index\Image\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Snaptec\Test\BrandImageUpload</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Snaptec\Test\BrandImageUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">brand/tmp/images</argument>
+            <argument name="basePath" xsi:type="string">brand/images</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+   
+</config>
